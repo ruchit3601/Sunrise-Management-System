@@ -1,0 +1,7 @@
+com\sunrise\airlines\AirlineApiApplication.class
+com\sunrise\airlines\repository\FlightRepository.class
+com\sunrise\airlines\service\AirlineService.class
+com\sunrise\airlines\model\Flight.class
+com\sunrise\airlines\model\Reservation.class
+com\sunrise\airlines\controller\AirlineController.class
+com\sunrise\airlines\repository\ReservationRepository.class
