@@ -1,14 +1,17 @@
 package com.sunrise.airlines.controller;
 
 import com.sunrise.airlines.model.Flight;
+import com.sunrise.airlines.model.Passenger;
 import com.sunrise.airlines.model.Reservation;
 import com.sunrise.airlines.service.AirlineService;
 import jakarta.validation.Valid;
 import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -27,8 +30,17 @@ public class AirlineController {
     }
 
     @GetMapping("/flights")
-    public List<Flight> getFlights() {
+    public List<Flight> getFlights(@RequestParam(required = false) String source,
+                                   @RequestParam(required = false) String destination) {
+        if (source != null && destination != null) {
+            return airlineService.findFlightsByRoute(source, destination);
+        }
         return airlineService.getAllFlights();
+    }
+
+    @GetMapping("/passengers/{passport}")
+    public Passenger getPassenger(@PathVariable String passport) {
+        return airlineService.getPassengerByPassport(passport);
     }
 
     @PostMapping("/bookings")

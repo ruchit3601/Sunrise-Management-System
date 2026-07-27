@@ -1,7 +1,9 @@
 C:\Users\Ruchit Chudasama\Desktop\Sunrise-Airlines---Airline-Management-System-main\backend\src\main\java\com\sunrise\airlines\AirlineApiApplication.java
 C:\Users\Ruchit Chudasama\Desktop\Sunrise-Airlines---Airline-Management-System-main\backend\src\main\java\com\sunrise\airlines\controller\AirlineController.java
 C:\Users\Ruchit Chudasama\Desktop\Sunrise-Airlines---Airline-Management-System-main\backend\src\main\java\com\sunrise\airlines\model\Flight.java
+C:\Users\Ruchit Chudasama\Desktop\Sunrise-Airlines---Airline-Management-System-main\backend\src\main\java\com\sunrise\airlines\model\Passenger.java
 C:\Users\Ruchit Chudasama\Desktop\Sunrise-Airlines---Airline-Management-System-main\backend\src\main\java\com\sunrise\airlines\model\Reservation.java
 C:\Users\Ruchit Chudasama\Desktop\Sunrise-Airlines---Airline-Management-System-main\backend\src\main\java\com\sunrise\airlines\repository\FlightRepository.java
+C:\Users\Ruchit Chudasama\Desktop\Sunrise-Airlines---Airline-Management-System-main\backend\src\main\java\com\sunrise\airlines\repository\PassengerRepository.java
 C:\Users\Ruchit Chudasama\Desktop\Sunrise-Airlines---Airline-Management-System-main\backend\src\main\java\com\sunrise\airlines\repository\ReservationRepository.java
 C:\Users\Ruchit Chudasama\Desktop\Sunrise-Airlines---Airline-Management-System-main\backend\src\main\java\com\sunrise\airlines\service\AirlineService.java

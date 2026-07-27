@@ -1,6 +1,7 @@
 package com.sunrise.airlines.controller;
 
 import com.sunrise.airlines.model.Flight;
+import com.sunrise.airlines.model.Passenger;
 import com.sunrise.airlines.model.Reservation;
 import com.sunrise.airlines.service.AirlineService;
 import java.time.LocalDate;
@@ -38,6 +39,16 @@ class AirlineControllerTest {
                         .content("{\"flightCode\":\"AI101\",\"flightName\":\"Sunrise Air\",\"source\":\"Delhi\",\"destination\":\"Mumbai\"}"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.flightCode").value("AI101"));
+    }
+
+    @Test
+    void getPassengerShouldReturnPassengerDetails() throws Exception {
+        Passenger passenger = new Passenger("Jane Doe", "Indian", 9876543210L, "Mumbai", "P123", "Female");
+        Mockito.when(airlineService.getPassengerByPassport("P123")).thenReturn(passenger);
+
+        mockMvc.perform(get("/passengers/P123"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.passport").value("P123"));
     }
 
     @Test
